@@ -1,5 +1,23 @@
 # Coding exercise
 
+This is a basic coding exercise created by the (UK) Cabinet Office.
+
+Install dependencies
+
+```
+python(3) -m pip install -r requirements.txt
+```
+
+Run application
+
+```
+python(3) manage.py runserver
+```
+
+Original instructions are below:
+
+---
+
 Clone this repository and commit your work to it.  Push the repository to a suitable service so that we can see the results (eg GitLab or GitHub).
 
 Create an API using Python. The API should have three endpoints:
