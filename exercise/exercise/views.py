@@ -5,11 +5,12 @@ from django.http import HttpResponse, HttpResponseBadRequest
 
 def hello_world(request):
     """The REST endpoint to return 'Hello World'."""
-    return HttpResponse('Hello World')
+    return HttpResponse("Hello World")
 
 
 # Could supplement add_numbers() and join_words() with additional endpoints
 # that take args in a POST request (rather than in the URL)
+
 
 def add_numbers(request, num1, num2):
     """The REST endpoint to return the sum of two numbers.
@@ -23,14 +24,14 @@ def add_numbers(request, num1, num2):
         result = sum([float(n) for n in str_params])
     except ValueError:
         # If any argument is not a number, return a 400 response
-        return HttpResponseBadRequest('Non numerical value(s) supplied in url: ' + ', '.join(str_params))
+        return HttpResponseBadRequest("Non numerical value(s) supplied in url: " + ", ".join(str_params))
     # If all arguments were numbers, return the sum
     # For tidiness, remove trailing '.0's
-    return_val = int(result) if str(result).endswith('.0') else result
+    return_val = int(result) if str(result).endswith(".0") else result
     return HttpResponse(return_val)
 
 
 def join_words(request, s1, s2):
     """The REST endpoint to return the concatenation of two strings."""
     # Return the two string-args with a dash joining them
-    return HttpResponse('{}-{}'.format(s1, s2))
+    return HttpResponse("{}-{}".format(s1, s2))
