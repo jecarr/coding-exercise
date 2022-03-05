@@ -3,4 +3,12 @@
 
 {% block content %}
   <span>Uh-oh! (You've navigated to a page that doesn't exist...)</span>
+  {# As we have only three endpoints, we can list them out to be helpful #}
+  <br><br>
+  <span>The only URLs available are:</span>
+  <ul>
+    <li>/hello/</li>
+    <li>/add-numbers/&lt;first-number&gt;/&lt;second-number&gt;/</li>
+    <li>/join-words/&lt;first-word&gt;/&lt;second-word&gt;/</li>
+  </ul>
 {% endblock %}
