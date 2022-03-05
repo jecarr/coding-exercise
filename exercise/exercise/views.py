@@ -14,7 +14,9 @@ def hello_world(request):
 
 def add_numbers(request, num1, num2):
     """The REST endpoint to return the sum of two numbers.
-    Limitations: Does not allow multiple minus signs (e.g. permits '-1' but not '--1').
+    Limitations: Does not allow multiple minus signs (e.g. permits '-1' but not '--1');
+    Also does not check for URL-quoted strings (e.g. '1%2f3' = '1/3'): this can be
+    solved with urllib.parse.unquote() calls on the arguments.
     """
     # Put the arguments in a list (will use in sum() or for error-response)
     str_params = [num1, num2]
