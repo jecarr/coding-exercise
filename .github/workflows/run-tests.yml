@@ -42,4 +42,5 @@ jobs:
         flake8 .
     - name: Run the tests
       run: |
+        cd exercise/
         python manage.py test tests/ --noinput
