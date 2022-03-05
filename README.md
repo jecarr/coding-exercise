@@ -2,17 +2,17 @@
 
 This is a basic coding exercise created by the (UK) Cabinet Office.
 
-###Installing
+### Installing
 
 (Please note, where `python` is referred to, use `python` or `python3` as appropriate for your environment.)
 
-Begin by cloning this repository. Next, install dependencies:
+Begin by cloning this repository. Next, change-directory to be in the coding-exercise folder and install dependencies:
 
 ```
 python -m pip install -r requirements.txt
 ```
 
-###Launching the application
+### Launching the application
 
 To run the application, you can do the following in the top-level exercise/ directory:
 
@@ -26,7 +26,7 @@ You can then call the three endpoints (using either a web browser or a REST clie
 - /add-numbers/&lt;first-number&gt;/&lt;second-number&gt;/
 - /join-words/&lt;first-word&gt;/&lt;second-word&gt;/
 
-###Examples
+### Examples
 
 - /hello/
   - Returns `Hello World`
@@ -35,7 +35,7 @@ You can then call the three endpoints (using either a web browser or a REST clie
 - /join-words/hello/there/
   - Returns `hello-there`
 
-###Tests
+### Tests
 
 You can run the test-suite (again in the top-level exercise/ directory) via:
 
